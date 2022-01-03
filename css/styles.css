@@ -43,7 +43,7 @@ margin-top:34px;
     margin-left: 30px;
         
 }
- #menu li a:hover  {
+ #menu li a:hover{
     color:white;
     transition: all .5s;       
 }
@@ -121,6 +121,22 @@ margin-top:34px;
      border: none;
      outline:none;
 }
+.box-search{
+   position:fixed;
+   top:38px;
+   left:50%;
+   transform:translateX(-88.3%);
+   padding-bottom:150px;
+   background-color:white;
+   color: white;
+   z-index:2;
+   
+}
+.box-search li a{
+    display:block;
+}
+
+
  #iconshop{
      position: relative;
      background-color:#F1E7E8 ;

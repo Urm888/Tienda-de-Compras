@@ -4,6 +4,12 @@ let iconshop=document.querySelector(Iconshop);
 
 
 //Funcion para crear busqueda
-function buscar(){
-    filter=document
+let buscar=function (){
+    filter=document.querySelector(search).value
+    if(filter=="a","b","c","d","e","f"){
+        
+
+    }
+
 }
+    
