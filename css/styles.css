@@ -109,7 +109,7 @@ margin-top:34px;
      justify-content: center;
      align-items: center;              
  }
-  #search{
+#search{
      position:absolute;
      background-color:#F1E7E8;
      margin-top:10px;
@@ -121,19 +121,21 @@ margin-top:34px;
      border: none;
      outline:none;
 }
-.box-search{
+.boxsearch{
    position:fixed;
-   top:38px;
+   top:0px;
    left:50%;
-   transform:translateX(-88.3%);
-   padding-bottom:150px;
+   transform:translateX(-71.4%);
+   padding-bottom:120px;
+   padding-right:50px;
    background-color:white;
-   color: white;
    z-index:2;
+   display:inline;
    
 }
-.box-search li a{
+.boxsearch li a{
     display:block;
+    
 }
 
 
