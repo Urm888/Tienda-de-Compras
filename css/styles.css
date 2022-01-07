@@ -118,8 +118,8 @@ header{
      border: none;
      outline:none;
 }
-.boxsearch{ 
-   position:fixed;
+#boxsearch{ 
+   position:absolute;
    top:38.4px;
    left:50%; 
    transform: translateX(-192%); 
@@ -127,17 +127,17 @@ header{
    padding-right:50px;
    background-color:#333333;
    z-index:2;
-   display:none;
+   display:block;
     
 }
-.boxsearch li a{
+#boxsearch li a{
     display:block;
     color: white;
     text-decoration: none;
     padding-top:15px;
 }
 
-.boxsearch li a:hover{
+#boxsearch li a:hover{
    background-color:#068CE4;
 
 }
