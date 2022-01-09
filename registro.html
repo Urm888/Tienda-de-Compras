@@ -11,26 +11,37 @@
         <body>
             <form id="formulario">
                 <h1>REGISTRATE</h1>
-                <div class="input-contenedor">                  
+
+                <div class="input-contenedor nombre">                  
                 <label for="nombre"></label>
                 <i class="fas fa-user icon"></i>
-                <input type="text" id="Nombre" placeholder="Nombre completo">      
+                <input type="text" id="nombre" placeholder="Nombre completo"> 
+                <p class="mensajeError"></p>    
                 </div>
-                <div class="input-contenedor">                  
+
+                <div class="input-contenedor correo">                  
                     <label for="correo"></label>
                     <i class="fas fa-envelope-square icon"></i>
-                    <input type="email" id="correo" Placeholder="Correo Electronico">      
+                    <input type="email" id="correo" Placeholder="Correo Electronico"> 
+                 <p class="mensajeError"></p>     
                 </div>
-                <div class="input-contenedor">                  
+
+                <div class="input-contenedor contraseña">                  
                     <label for="contraseña"></label>
                     <i class="fas fa-lock icon"></i>
-                    <input type="password" id="contraseña"  placeholder="Contraseña"> 
+                    <input type="password" id="contraseña"  placeholder="Contraseña">
+                    <p  class="mensajeError"></p> 
                 </div>
+
                 <div>
                     <label for="envio" ></label>
                     <input type="submit"value="ENVIAR" id="enviar" class="button">
+                    <p class="warning"></p>
                 </div>
-                <p>Al registrarte aceptas nuestros terminos y condiciones de uso. ¿Ya tienes una cuenta? <a href="/login.html"> Iniciar sesion </a> </p>    
+
+                
+                <p class="terminos">Al registrarte <a href="">aceptas nuestros terminos y condiciones de uso.</a>  ¿Ya tienes una cuenta? <a href="/login.html"> Iniciar sesion </a> </p>
+                <p class="mensajeError"></p>    
             </form>
            <script src="js/codigo.js"></script>
         </body>

@@ -127,7 +127,7 @@ header{
    padding-right:50px;
    background-color:#333333;
    z-index:2;
-   display:block;
+   display:none;
     
 }
 #boxsearch li a{
