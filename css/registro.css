@@ -2,11 +2,16 @@
 body{
     background: url("../media/compras2.jpg");
 }
+.loginlogo{
+    margin-left:35%;
+    margin-top:100px;
+    
+}
 #formulario{
     background-color: #fff;
     margin-right:35%;
     margin-left:35%;
-    margin-top:100px;
+    margin-top:10px;
     padding-bottom:5px;
 }
   h1{
