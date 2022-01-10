@@ -7,7 +7,7 @@ const expresiones = {
 	cellphone: /^\d{7,14}$/ // 7 a 14 numeros.
 }  
  const divInput=document.querySelectorAll(".input-contenedor");
- const form=document.getElementById("formulario")
+ const form=document.getElementById("formulario");
 
 
  function iniciar(){
@@ -17,13 +17,14 @@ const expresiones = {
  function ejecutarBoton(e){    
    e.preventDefault();
    divInput.forEach((element)=>{
-   element.lastElementChild.innerHTML="";});
-   validacionForm()
-   mensajeDeEnvio()
+   element.lastElementChild.innerHTML="";});   
+   validacionForm();
+   mensajeDeError();
+   mensajeDeEnvio();
 }
 
-  function validacionForm (){
-   let=condicion=true;
+  function validacionForm(){
+   
    nombre=document.getElementById("nombre").value;
    if(!expresiones.name.test(nombre)){ 
     mensajeDeError("nombre","ERROR: Ingrese Su Nombre");}
@@ -35,10 +36,11 @@ const expresiones = {
    contraseña=document.getElementById("contraseña").value;
    if(!expresiones.password.test(contraseña)){
     mensajeDeError("contraseña","ERROR: El minimo de Caracteres validos son 6");} 
+   
 }
 
 function mensajeDeError(input,mensaje){
-   let elemento=document.querySelector(`.${input}`)
+   let elemento=document.querySelector(`.${input}`);
        elemento.lastElementChild.innerHTML=mensaje;
  }
 
