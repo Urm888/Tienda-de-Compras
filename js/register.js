@@ -24,7 +24,7 @@ const expresiones = {
    } 
 
    function validacionForm(){
-    let validar=true;
+    let validar=true;clearInterval
     divInput.forEach((element)=>{
     element.lastElementChild.innerHTML="";});
     
