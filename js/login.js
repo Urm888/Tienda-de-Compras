@@ -12,39 +12,47 @@ const expresiones = {
 
  function iniciar(){
    booton=document.getElementById("enviar");
-   booton.addEventListener("click",ejecutarBoton);}  
+   booton.addEventListener("click",ejecutarBoton);
+  
+}  
 
- function ejecutarBoton(e){    
-   e.preventDefault();
-   divInput.forEach((element)=>{
-   element.lastElementChild.innerHTML="";});   
-   validacionForm();
-   mensajeDeError();
-   mensajeDeEnvio();
-}
+  function ejecutarBoton(e){    
+    e.preventDefault(); 
+    let validar = validacionForm();
+    if(validar){      
+    mensajeDeEnvio();}     
+   } 
 
-  function validacionForm(){
-   
+   function validacionForm(){
+    let validar=true;
+    divInput.forEach((element)=>{
+    element.lastElementChild.innerHTML="";});
+    
    nombre=document.getElementById("nombre").value;
    if(!expresiones.name.test(nombre)){ 
-    mensajeDeError("nombre","ERROR: Ingrese Su Nombre");}
-
+    mensajeDeError("nombre","ERROR: Ingrese Su Nombre");
+    validar=false;}
+   
    correo=document.getElementById("correo").value;
    if(!expresiones.email.test(correo)){
-    mensajeDeError("correo","ERROR: Ingrese un correo Valido");}
+    mensajeDeError("correo","ERROR: Ingrese un correo Valido");validar=false;}
+    
 
    contraseña=document.getElementById("contraseña").value;
    if(!expresiones.password.test(contraseña)){
-    mensajeDeError("contraseña","ERROR: El minimo de Caracteres validos son 6");} 
-   
-}
+    mensajeDeError("contraseña","ERROR: El minimo de Caracteres validos son 6");
+    validar=false;}
+    
 
-function mensajeDeError(input,mensaje){
+    return validar;       
+    }
+
+  function mensajeDeError(input,mensaje){
    let elemento=document.querySelector(`.${input}`);
-       elemento.lastElementChild.innerHTML=mensaje;
+       elemento.lastElementChild.innerHTML=mensaje;      
  }
 
- function mensajeDeEnvio(){
+  function mensajeDeEnvio(){
    form.reset();
 }
 
