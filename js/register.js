@@ -24,7 +24,7 @@ const expresiones = {
    } 
 
    function validacionForm(){
-    let validar=true;clearInterval
+    let validar=true;
     divInput.forEach((element)=>{
     element.lastElementChild.innerHTML="";});
     
@@ -43,9 +43,12 @@ const expresiones = {
     mensajeDeError("contraseña","ERROR: El minimo de Caracteres validos son 6");
     validar=false;}
     
-
-    return validar;       
-    }
+    contraseña2=document.getElementById("contraseña2").value;
+    if(contraseña!=contraseña2){
+      mensajeDeError("contraseña2","Las contraseñas no coinciden")     
+     validar=false;}     
+     return validar;       
+     }
 
   function mensajeDeError(input,mensaje){
    let elemento=document.querySelector(`.${input}`);

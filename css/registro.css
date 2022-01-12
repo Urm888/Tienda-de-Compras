@@ -68,9 +68,13 @@ p a{
     margin:5px;
     margin-left:29px;
     background-color:#E95050; 
-    width:88%; 
-
+    width:88%;
+    }
+.mensajeloginError{
+    text-align:center;
+    background-color:#E95050;
 }
+
 
 .terminos{
     margin-left:20px;
@@ -81,12 +85,13 @@ p a{
 }
 
 
-@media (max-width:1250px){
+@media screen and  (max-width:800px){
     #formulario {
         margin:auto;
         width:100%;        
     }
     .loginlogo{
+        left:30%;
         margin:auto;
         width:100%; 
 
