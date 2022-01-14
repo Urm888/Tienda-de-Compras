@@ -68,11 +68,16 @@ p a{
     margin:5px;
     margin-left:29px;
     background-color:#E95050; 
-    width:88%;
+    width:89.5%;
     }
 .mensajeloginError{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     text-align:center;
+    margin:5px;
+    margin-left:29px;
     background-color:#E95050;
+    width:88%;
 }
 
 
@@ -85,7 +90,7 @@ p a{
 }
 
 
-@media screen and  (max-width:800px){
+@media screen and  (max-width:1250px){
     #formulario {
         margin:auto;
         width:100%;        

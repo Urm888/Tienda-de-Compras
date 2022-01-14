@@ -1,44 +1,53 @@
 window.onload=init;
-const regulaciones={
-    password: /^.{6,15}$/, // 6 a 15 digitos.
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/}
-const form=document.getElementById("formulario");
-const error=docuemnt.querySelectorAll(".input-contenedor");
+const expresiones = {
+	user: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	password: /^.{6,15}$/, // 6 a 15 digitos.
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	
+}  
+ const divInput=document.querySelectorAll(".input-contenedor");
+ const form=document.getElementById("formulario");
 
-function init(){
-login=document.getElementById("sesion").value;
-login.addEventListener("click",botonIniciar);
-}
 
-function botonIniciar(e){
-    e.preventDefault();
-    validar=validarLogin
+ function init(){
+
+   booton=document.getElementById("sesion");
+   booton.addEventListener("click",ejecutarBoton); 
+ }
+
+ function ejecutarBoton(e){
+    e.preventDefault(); 
+    let validar = validacionLogin();
     if(validar){      
-    mensajeDeEnvio();} 
-}
-
-function validarLogin(){
+    mensajeDeSend();}
+ }
+ function validacionLogin(){
     let validar=true;
+    divInput.forEach((element)=>{
+    element.lastElementChild.innerHTML="";});
+        
+   correo=document.getElementById("email").value;
+   if(!expresiones.email.test(correo)){
+    mensajeDeWarning("correo","ERROR:El correo ingresado no se encuentra en nuestra base de datos");validar=false;}
+    
 
-correo=document.getElementById("correo").value;
-if(!regulaciones.email.test(correo)){
-    warning("correo","El correo electronico ingresado no coincide con alguna cuenta");
+   contraseña=document.getElementById("pass").value;
+   if(contraseña == correo){
+    mensajeDeWarning("contraseña","ERROR: La contraseña es incorrecta");
     validar=false;}
+    
+        
+     return validar;       
+     }
 
-contraseña=document.getElementById("contraseña").value;
-if(!regulaciones.password.test(contraseña)){
-    warning("contraseña","La contraseña es Incorrecta");
-    validar=false;}
-    return validar;
+  function mensajeDeWarning(input,mensaje){
+   let elemento=document.querySelector(`.${input}`);
+       elemento.lastElementChild.innerHTML=mensaje;      
+ }
+
+  function mensajeDeSend(){
+   form.reset();
 }
 
-
-function warning(iniciar,mensaje){
-    let war=document.querySelector(`.${iniciar}`);
-        war.lastElementChild.innerHTML=mensaje;
-}
-function mensajeDeEnvio(){
-    form.reset();
-}
 
 
