@@ -1,19 +1,55 @@
 window.onload=iniciar;
-const buscador=document.getElementById("search").value;
-const lista=document.getElementById("boxsearch").value;
+const buscador=document.querySelector("#search");
+const caja=document.querySelector("#boxsearch");
 
-function iniciar (){
-    buscador.addEventListener("keyup",search);
+
+const productos=[
+    {nombre: "Adidas"},
+    {nombre: "Abrigo"},
+    {nombre: "Almohada"},
+    {nombre: "DC"},
+    {nombre: "Esmeril"},
+    {nombre: "Hisense"},
+    {nombre: "Jordan"},
+    {nombre: "Licuadora"},
+    {nombre: "Lavadoras"},
+    {nombre: "Laptop"},
+    {nombre: "Martillo"},
+    {nombre: "Microondas"},
+    {nombre: "Nike"},
+    {nombre: "Samsung"},
+    {nombre: "Vans"}, 
+    {nombre: "Vino"},
+    {nombre: "Zapatos"},
+]
+
+function iniciar(){
+    filtro=document.querySelector("#iconsearch");   
+    buscador.addEventListener("keyup",menu);
 }
-function search(){
-    productos=[];
-    for(var i=0; i<lista.lenght; i++);{
-        producto=producto[i].getElementByTagName("a");
-        text=producto.textContent || text.innerText;
-        if(text.toUpperCase().indexOf(buscador)>-10);
-        productos[i].display="";
-       lista.style.display="block";
+
+function menu(){
+    caja.innerHTML=``;
+    busqueda=buscador.value.toLowerCase();
+    for( let producto of productos){ 
+        let lista=producto.nombre.toLowerCase();
+        if(lista.indexOf(busqueda) !==-1){
+            caja.innerHTML +=`<li>${producto.nombre}</li>`
+            caja.style.display="block";
+            if(search.value ===""){
+                caja.style.display="none";
+            }            
+     }
     }
 
-}
+  }
+
+
+
+
+
+
+
+
+ 
 
