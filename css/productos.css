@@ -1,0 +1,29 @@
+#Electrodomesticos{
+    background: url("../media/Estufas.jpg");
+    margin-top:20px;
+    margin-bottom:50px;
+    margin-left:20px;
+    width:400px;
+    height:250px;
+    float: left;        
+}
+
+#Licuadora{
+    background: url("../media/Cafetera.jpg");
+    margin-top:20px;
+    margin-bottom:50px;
+    margin-left:20px;  
+    width:400px;
+    height:250px;
+    float:left;    
+}
+
+#Plancha{
+    background: url("../media/plancha.jpg");
+    margin-top:20px;
+    margin-bottom:50px;
+    margin-left:20px;
+    width:400px;
+    height:250px;
+    float: left;              
+}
