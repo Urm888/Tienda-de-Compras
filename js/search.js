@@ -1,16 +1,13 @@
-window.onload=iniciar;
-const buscador=document.querySelector("#search");
-const caja=document.querySelector("#boxsearch");
-
+window.load = iniciar;
 
 function iniciar(){
- buscador.value.toLowerCase();
- lista.addEventListenner("keyup",filtro);
+ const buscador=document.querySelector(`search`);
+       buscador.addEventListener("click",buscar)
 }
 
-function filtro(){
- console.log(lista.value);
-
+function buscar(){
+  caja=buscador.value.toLowerCase();
+  console.log(caja.value);
 }
 
 
