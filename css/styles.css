@@ -7,14 +7,10 @@ html{
     margin:0px;
     height:1000px;
    }
-
-
 #menu img{
     float:left;
 }
-header{  
-    background-image: url(media/compras.jpg);       
-    }
+
 #menu {
     background-color: #E23E4F;
     width:100%;
@@ -131,7 +127,7 @@ header{
    background-color:#333333;
    color:white;
    z-index:2;
-   display:block;
+   display:none;
     
 }
 #boxsearch li a{
