@@ -21,7 +21,7 @@ function iniciar(){
   if(lista.indexOf(caja) !== -1){
   list.style.display="block";        
   list.innerHTML+=
-  `<li><a href="Adidas.html">${articulo.nombre} </a><li/>`
+  `<li><a href="Adidas.html">${articulo.nombre} </a><li/>`+
   `<li><a href="Almohadas.html">${articulo.nombre} </a><li/>`
  
 }
