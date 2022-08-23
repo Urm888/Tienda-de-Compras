@@ -7,7 +7,7 @@ const list=document.querySelector("#boxsearch");
 
 const articulos = [
       {nombre: `Adidas`},
-      {nombre: `Almohada`},
+      {0nombre: `Almohada`},
       {nombre: `Audifonos`},
 ]
 
@@ -15,20 +15,20 @@ const articulos = [
 function iniciar(){
     caja=search.value.toLowerCase();
     list.innerHTML=``;
-
-  for(let articulo of articulos){
-  let lista=articulo.nombre.toLowerCase();          
-  if(lista.indexOf(caja) !== -1){
-  list.style.display="block";        
-  list.innerHTML+=
-  `<li><a href="Adidas.html">${articulo.nombre} </a><li/>`+
-  `<li><a href="Almohadas.html">${articulo.nombre} </a><li/>`
- 
+  
+   if(event.key  ==="Escape")event.target.value="";
+   for(let articulo of articulos){
+   let lista=articulo.nombre.toLowerCase();          
+   if(lista.indexOf(caja) !== -1){
+   list.style.display="block";        
+   list.innerHTML += `<li><a href="Adidas.html"> ${articulo.nombre}</a></li>`
+   
 }
 }          
               
   if(search.value ===""){
   list.style.display="none"
+  
   
 }
 }
