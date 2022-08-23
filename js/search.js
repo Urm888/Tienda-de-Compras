@@ -7,7 +7,7 @@ const list=document.querySelector("#boxsearch");
 
 const articulos = [
       {nombre: `Adidas`},
-      {0nombre: `Almohada`},
+      {nombre: `Almohada`},
       {nombre: `Audifonos`},
 ]
 
