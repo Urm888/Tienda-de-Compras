@@ -1,38 +1,26 @@
 window.load = iniciar;
-const search=document.querySelector("#search");
-const icon=document.querySelector("#iconsearch");
-const list=document.querySelector("#boxsearch");
+const search=document.querySelector("#search");   //caja del buscador
+const icon=document.querySelector("#iconsearch"); //icono de  busqueda
+const list=document.querySelector("#boxsearch");  //caja de objetos
       search.addEventListener("keyup",iniciar);
            
 
-const articulos = [
-      {nombre: `Adidas`},
-      {nombre: `Almohada`},
-      {nombre: `Audifonos`},
-]
-
 
 function iniciar(){
-    caja=search.value.toLowerCase();
-    list.innerHTML=``;
-  
    if(event.key  ==="Escape")event.target.value="";
-   for(let articulo of articulos){
-   let lista=articulo.nombre.toLowerCase();          
-   if(lista.indexOf(caja) !== -1){
-   list.style.display="block";        
-   list.innerHTML += `<li><a href="Adidas.html"> ${articulo.nombre}</a></li>`
+   filter=search.value.toLowerCase();
    
+
+  
 }
-}          
+
+   
               
-  if(search.value ===""){
-  list.style.display="none"
+ 
   
   
-}
-}
-iniciar();
+
+
 
 
 
