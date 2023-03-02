@@ -1,18 +1,32 @@
-window.load = iniciar;
-const search=document.querySelector("#search");   //caja del buscador
-const icon=document.querySelector("#iconsearch"); //icono de  busqueda
-const list=document.querySelector("#boxsearch");  //caja de objetos
-      search.addEventListener("keyup",iniciar);
-           
 
+window.onload=iniciar;
+const input=document.getElementById("search");
+const boxsearch=document.getElementById("boxsearch"); 
+
+const articulos = [
+   {nombre: 'Adidas'},
+   {nombre: 'Agua'},
+   {nombre: 'Almohada'},
+   {nombre: 'Audifonos'},
+]
 
 function iniciar(){
-   if(event.key  ==="Escape")event.target.value="";
-   filter=search.value.toLowerCase();
-   
-
-  
+     const input=document.getElementById("search"); 
+           input.addEventListener("keyup",busqueda);
+           
 }
+
+function busqueda(){
+       const cosas=input.toLowerCase();
+    
+          
+}
+
+
+
+
+
+
 
    
               

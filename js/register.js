@@ -35,7 +35,8 @@ const expresiones = {
    
    correo=document.getElementById("correo").value;
    if(!expresiones.email.test(correo)){
-    mensajeDeError("correo","ERROR: Ingrese un correo Valido");validar=false;}
+    mensajeDeError("correo","ERROR: Ingrese un correo Valido");
+    validar=false;}
     
 
    contraseña=document.getElementById("contraseña").value;
@@ -49,7 +50,7 @@ const expresiones = {
      validar=false;}     
      return validar;       
      }
-
+     
   function mensajeDeError(input,mensaje){
    let elemento=document.querySelector(`.${input}`);
        elemento.lastElementChild.innerHTML=mensaje;      
